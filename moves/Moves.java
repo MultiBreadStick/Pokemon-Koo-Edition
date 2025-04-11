@@ -55,8 +55,7 @@ public class Moves {
         moveList.add(new Move("Rock Slide", "Rock", 75, 90, 0, "Physical", "30% chance to make the target flinch."));
         moveList.add(new Move("Hyper Beam", "Normal", 150, 90, 0, "Special", "User must recharge on the next turn."));
         moveList.add(new Move("Dragon Rage", "Dragon", 0, 100, 0, "Special", "Always deals 40 HP damage."));
-        moveList.add(new Move("Substitute", "Normal", 0, 100, 0, "Status", "Creates a substitute using 25% of the user's max HP."));
-        // Add more moves here...
+       
     }
 
 }

@@ -37,14 +37,14 @@ public class Gen1Pokemon extends Pokemon {
             "images/VenusaurFront.png",
             "images/VenusaurBack.png"
         ));
-        gen1PokemonList.add(new Gen1Pokemon(
-            "Charmander",
-            "Fire",
-            39, 52, 43, 65, 60, 50,
-            new ArrayList<>(Arrays.asList("Scratch", "Growl", "Ember", "Leer", "Rage", "Slash", "Flamethrower", "Fire Spin")),
-            "images/CharmanderFront.png",
-            "images/CharmanderBack.png"
-        ));
+        //gen1PokemonList.add(new Gen1Pokemon(
+        //    "Charmander",
+        //    "Fire",
+        //    39, 52, 43, 65, 60, 50,
+        //    new ArrayList<>(Arrays.asList("Scratch", "Growl", "Ember", "Leer", "Rage", "Slash", "Flamethrower", "Fire Spin")),
+        //    "images/CharmanderFront.png",
+        //    "images/CharmanderBack.png"
+        //));
         gen1PokemonList.add(new Gen1Pokemon(
             "Charmeleon",
             "Fire",

@@ -1,6 +1,6 @@
 package moves;
 
-public class Move { 
+public class  Move { 
     
     String name = ""; 
     String type = ""; 
