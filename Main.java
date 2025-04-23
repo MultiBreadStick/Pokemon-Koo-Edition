@@ -1,16 +1,13 @@
-import pokemons.Gen1Pokemon; // Import the Gen1Pokemon class
+import pokemons.Gen1Pokemon; 
+import javax.swing.JFrame; 
+import java.util.Scanner;  
 
 public class Main {
     public static void main(String[] args) {
-        // Initialize the Gen 1 Pokémon list
-        Gen1Pokemon.initializeGen1Pokemon();
-
-        // Verify if all Pokémon are present
-        verifyPokemon();
-    }
-
-    public static void verifyPokemon() {
-        System.out.println("Verifying Pokémon list...");
-        Gen1Pokemon.verifyPokemonList();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Pokemon: Koo Edition!");
+        System.out.println("Please enter your name: ");
+        String playerName = scanner.nextLine(); 
+        
     }
 }
