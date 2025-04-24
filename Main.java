@@ -11,7 +11,9 @@ public class Main {
         System.out.println("Welcome to Pokemon: Koo Edition!");
         System.out.println("Please enter your name: ");
         String playerName = scanner.nextLine(); 
-        
+        while (true) {
+            
+        }
     }
 
     public Pokemon[] pokemonAssigner() {
