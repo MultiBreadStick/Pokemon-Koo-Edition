@@ -37,14 +37,14 @@ public class Gen1Pokemon extends Pokemon {
             "images/VenusaurFront.png",
             "images/VenusaurBack.png"
         ));
-        //gen1PokemonList.add(new Gen1Pokemon(
-        //    "Charmander",
-        //    "Fire",
-        //    39, 52, 43, 65, 60, 50,
-        //    new ArrayList<>(Arrays.asList("Scratch", "Growl", "Ember", "Leer", "Rage", "Slash", "Flamethrower", "Fire Spin")),
-        //    "images/CharmanderFront.png",
-        //    "images/CharmanderBack.png"
-        //));
+        gen1PokemonList.add(new Gen1Pokemon(
+            "Charmander",
+            "Fire",
+            39, 52, 43, 65, 60, 50,
+            new ArrayList<>(Arrays.asList("Scratch", "Growl", "Ember", "Leer", "Rage", "Slash", "Flamethrower", "Fire Spin")),
+            "images/CharmanderFront.png",
+            "images/CharmanderBack.png"
+        ));
         gen1PokemonList.add(new Gen1Pokemon(
             "Charmeleon",
             "Fire",
@@ -1223,34 +1223,10 @@ public class Gen1Pokemon extends Pokemon {
         ));
     }
 
-    public static void verifyPokemonList() {
-        List<String> officialGen1Pokemon = Arrays.asList(
-            "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard",
-            "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree",
-            "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata",
-            "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu",
-            "Sandshrew", "Sandslash", "Nidoran♀", "Nidorina", "Nidoqueen", "Nidoran♂",
-            "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix", "Ninetales",
-            "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", "Oddish", "Gloom", "Vileplume",
-            "Paras", "Parasect", "Venonat", "Venomoth", "Diglett", "Dugtrio", "Meowth",
-            "Persian", "Psyduck", "Golduck", "Mankey", "Primeape", "Growlithe", "Arcanine",
-            "Poliwag", "Poliwhirl", "Poliwrath", "Abra", "Kadabra", "Alakazam", "Machop",
-            "Machoke", "Machamp", "Bellsprout", "Weepinbell", "Victreebel", "Tentacool",
-            "Tentacruel", "Geodude", "Graveler", "Golem", "Ponyta", "Rapidash", "Slowpoke",
-            "Slowbro", "Magnemite", "Magneton", "Farfetch'd", "Doduo", "Dodrio", "Seel",
-            "Dewgong", "Grimer", "Muk", "Shellder", "Cloyster", "Gastly", "Haunter",
-            "Gengar", "Onix", "Drowzee", "Hypno", "Krabby", "Kingler", "Voltorb",
-            "Electrode", "Exeggcute", "Exeggutor", "Cubone", "Marowak", "Hitmonlee",
-            "Hitmonchan", "Lickitung", "Koffing", "Weezing", "Rhyhorn", "Rhydon",
-            "Chansey", "Tangela", "Kangaskhan", "Horsea", "Seadra", "Goldeen", "Seaking",
-            "Staryu", "Starmie", "Mr. Mime", "Scyther", "Jynx", "Electabuzz", "Magmar",
-            "Pinsir", "Tauros", "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee",
-            "Vaporeon", "Jolteon", "Flareon", "Porygon", "Omanyte", "Omastar", "Kabuto",
-            "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres", "Dratini",
-            "Dragonair", "Dragonite", "Mewtwo", "Mew"
-        );
-    }
 
+    public static Pokemon getGen1Pokemon(int num) {
+        return gen1PokemonList.get(num);
+    }
     public static List<Gen1Pokemon> getGen1PokemonList() {
         return gen1PokemonList;
     }
@@ -1259,5 +1235,14 @@ public class Gen1Pokemon extends Pokemon {
         for (Gen1Pokemon pokemon : gen1PokemonList) {
             System.out.println(pokemon);
         }
+    }
+
+    public static Gen1Pokemon getPokemonInfo(String name) {
+        for (Gen1Pokemon pokemon : gen1PokemonList) {
+            if (pokemon.name.equalsIgnoreCase(name)) {
+                return pokemon;
+            }
+        }
+        return null; 
     }
 }

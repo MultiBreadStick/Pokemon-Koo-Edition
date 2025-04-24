@@ -58,6 +58,9 @@ public class Pokemon {
     public String getBackImage() { // Getter for the back image
         return backImage;
     }
+    public ArrayList<String> getMoves() {
+        return moves;
+    }
     public String toString() { // Updated toString to include the front and back images
         return "Pokemon{" +
                 "name='" + name + '\'' +
