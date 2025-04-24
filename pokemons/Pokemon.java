@@ -52,10 +52,10 @@ public class Pokemon {
     public double getSpecialDefense() {
         return specialDefense;
     }
-    public String getFrontImage() { // Getter for the front image
+    public String getFrontImage() { 
         return frontImage;
     }
-    public String getBackImage() { // Getter for the back image
+    public String getBackImage() { 
         return backImage;
     }
     public ArrayList<String> getMoves() {
