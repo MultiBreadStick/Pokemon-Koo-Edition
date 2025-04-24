@@ -1260,4 +1260,13 @@ public class Gen1Pokemon extends Pokemon {
             System.out.println(pokemon);
         }
     }
+
+    public static Gen1Pokemon getPokemonInfo(String name) {
+        for (Gen1Pokemon pokemon : gen1PokemonList) {
+            if (pokemon.name.equalsIgnoreCase(name)) {
+                return pokemon;
+            }
+        }
+        return null; 
+    }
 }
