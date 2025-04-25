@@ -1,12 +1,12 @@
 package Players;
 
-import pokemons.Pokemon; 
+import Players.PlayerPokemon; 
 
 public class Players {
     String name = "";
-    Pokemon[] pokemon = new Pokemon[6]; 
+    PlayerPokemon[] pokemon = new PlayerPokemon[6]; 
 
-    public Players(String name, Pokemon[] pokemon) {
+    public Players(String name, PlayerPokemon[] pokemon) {
         this.name = name;
         this.pokemon = pokemon;
     }
@@ -14,7 +14,7 @@ public class Players {
     public String getName() {
         return name;
     }
-    public Pokemon[] getPokemon() {
+    public PlayerPokemon[] getPokemon() {
         return pokemon;
     }
 

@@ -1,9 +1,9 @@
 package Players;
 
-import pokemons.Pokemon;
+import Players.PlayerPokemon; 
 
 public class ZacharyKoo extends Players{
-    public ZacharyKoo(Pokemon[] pokemon) {
+    public ZacharyKoo(PlayerPokemon[] pokemon) {
         super("Zachary Koo", pokemon);
     }
 }
