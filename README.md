@@ -13,7 +13,7 @@
 
 ---
 
-## 🎮 Features
+## Features
 - **Pokémon Teams**:
   - Players and opponents are randomly assigned random teams of 6 Pokémon from the original 151 Pokémon.
 - **Battle System**:
