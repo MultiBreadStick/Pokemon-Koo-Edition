@@ -41,9 +41,59 @@
           <mxGeometry y="126" width="200" height="150" as="geometry" />
         </mxCell>
         
-        <!-- Relationships -->
-        <mxCell id="Association1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;html=1;" edge="1" parent="1" source="Pokemon" target="Move">
+        <!-- Moves Class -->
+        <mxCell id="Moves" value="Moves" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MovesAttributes" value="- moveList: List&lt;Move&gt;" style="text;html=1;" vertex="1" parent="Moves">
+          <mxGeometry y="26" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MovesMethods" value="+ initializeMoves(): void&#xa;+ getMoveByName(name: String): Move&#xa;+ getRandomMove(moveNames: ArrayList&lt;String&gt;): Move" style="text;html=1;" vertex="1" parent="Moves">
+          <mxGeometry y="76" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Gen1Pokemon Class -->
+        <mxCell id="Gen1Pokemon" value="Gen1Pokemon" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="100" y="500" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Gen1PokemonAttributes" value="- gen1PokemonList: List&lt;Gen1Pokemon&gt;" style="text;html=1;" vertex="1" parent="Gen1Pokemon">
+          <mxGeometry y="26" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Gen1PokemonMethods" value="+ initializeGen1Pokemon(): void&#xa;+ getGen1PokemonList(): List&lt;Gen1Pokemon&gt;&#xa;+ getPokemonInfo(name: String): Gen1Pokemon" style="text;html=1;" vertex="1" parent="Gen1Pokemon">
+          <mxGeometry y="76" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Inheritance2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="Gen1Pokemon" target="Pokemon">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Player Class -->
+        <mxCell id="Player" value="Player" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="400" y="500" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="PlayerAttributes" value="- name: String&#xa;- pokemonTeam: ArrayList&lt;PlayerPokemon&gt;" style="text;html=1;" vertex="1" parent="Player">
+          <mxGeometry y="26" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PlayerMethods" value="+ getName(): String&#xa;+ setName(name: String): void&#xa;+ getPokemonTeam(): List&lt;PlayerPokemon&gt;&#xa;+ displayPlayerInfo(): void" style="text;html=1;" vertex="1" parent="Player">
+          <mxGeometry y="76" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- ZacharyKoo Class -->
+        <mxCell id="ZacharyKoo" value="ZacharyKoo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="700" y="500" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ZacharyKooMethods" value="+ getMove(): int" style="text;html=1;" vertex="1" parent="ZacharyKoo">
+          <mxGeometry y="26" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Inheritance3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="ZacharyKoo" target="Player">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- PokemonAssigner Class -->
+        <mxCell id="PokemonAssigner" value="PokemonAssigner" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="500" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="PokemonAssignerMethods" value="+ getRandomPlayerPokemonTeam(): ArrayList&lt;PlayerPokemon&gt;" style="text;html=1;" vertex="1" parent="PokemonAssigner">
+          <mxGeometry y="26" width="200" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
