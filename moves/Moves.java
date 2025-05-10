@@ -106,5 +106,19 @@ public class Moves {
         moveList.add(new Move("Substitute", "Normal", 0, 100, 0, "Status", "Uses 25% of the user's max HP to create a substitute that takes damage for the user."));
         moveList.add(new Move("Hyper Beam", "Normal", 150, 90, 0, "Special", "User must recharge on the next turn."));
     }
-
+    public static Move getMoveByName(String name) {
+        for (Move move : moveList) {
+            if (move.getName().equalsIgnoreCase(name)) {
+                return move;
+            }
+        }
+        return null; 
+    }
+    public static Move getRandomMove(ArrayList<String> moveNames) {
+        if (moveNames.isEmpty()) {
+            return null; // Return null if no moves are available
+        }
+        String randomMoveName = moveNames.get((int) (Math.random() * moveNames.size()));
+        return getMoveByName(randomMoveName);
+    }
 }

@@ -1,28 +1,35 @@
 package Players;
 
-import Players.PlayerPokemon; 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Players {
-    String name = "";
-    PlayerPokemon[] pokemon = new PlayerPokemon[6]; 
+    private String name;
+    private ArrayList<PlayerPokemon> pokemonTeam;
 
-    public Players(String name, PlayerPokemon[] pokemon) {
+    public Players(String name, ArrayList<PlayerPokemon> pokemonTeam) {
         this.name = name;
-        this.pokemon = pokemon;
+        this.pokemonTeam = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
-    public PlayerPokemon[] getPokemon() {
-        return pokemon;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public List<PlayerPokemon> getPokemonTeam() {
+        return pokemonTeam;
     }
 
     public void displayPlayerInfo() {
         System.out.println("Player Name: " + getName());
         System.out.println("Pokémon:");
-        for (Pokemon p : getPokemon()) {
-            System.out.println("- " + p.getName());
+        for (PlayerPokemon p : pokemonTeam) {
+            System.out.println("- " + p.getName() + " (" + p.getType() + ")");
         }
     }
 }

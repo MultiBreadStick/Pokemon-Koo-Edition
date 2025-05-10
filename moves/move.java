@@ -39,6 +39,10 @@ public class Move {
     public double getPriority() {
         return priority;
     }
+
+    public String getCategory() {
+        return category;
+    }
 }
     
 

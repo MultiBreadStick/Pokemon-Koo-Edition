@@ -84,5 +84,8 @@ public class PlayerPokemon extends Pokemon {
     public double getCurrentHealth() {
         return 100*(currentHealth/Gen1Pokemon.getPokemonInfo(getName()).getHealth());
     }
+    public void setCurrentHealth(double health) {
+        this.currentHealth = Math.max(0, health);
+    }
     
 }
