@@ -3,9 +3,17 @@ package moves;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Moves class manages a collection of all available moves in the game.
+ * It provides methods to initialize the move list, retrieve moves by name, and select random moves.
+ */
 public class Moves {
     private static List<Move> moveList = new ArrayList<>();
 
+    /**
+     * Initializes the list of moves with their attributes and effects.
+     * This method populates the static moveList with all available moves in the game.
+     */
     // Added with Copilot
     public static void initializeMoves() {
         moveList.add(new Move("Tackle", "Normal", 40, 100, 0, "Physical", "No additional effect."));
@@ -106,6 +114,13 @@ public class Moves {
         moveList.add(new Move("Substitute", "Normal", 0, 100, 0, "Status", "Uses 25% of the user's max HP to create a substitute that takes damage for the user."));
         moveList.add(new Move("Hyper Beam", "Normal", 150, 90, 0, "Special", "User must recharge on the next turn."));
     }
+
+    /**
+     * Retrieves a move by its name.
+     * 
+     * @param name The name of the move to retrieve.
+     * @return The Move object with the specified name, or null if not found.
+     */
     public static Move getMoveByName(String name) {
         for (Move move : moveList) {
             if (move.getName().equalsIgnoreCase(name)) {
@@ -114,6 +129,12 @@ public class Moves {
         }
         return null; 
     }
+    /**
+     * Selects a random move from a list of move names.
+     * 
+     * @param moveNames A list of move names to choose from.
+     * @return A randomly selected Move object, or null if the list is empty.
+     */
     public static Move getRandomMove(ArrayList<String> moveNames) {
         if (moveNames.isEmpty()) {
             return null; // Return null if no moves are available

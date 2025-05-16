@@ -4,13 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
+/**
+ * The Gen1Pokemon class represents Pokémon from the first generation.
+ * It extends the Pokemon class and provides functionality for managing
+ * a list of all Gen 1 Pokémon, including their attributes, moves, and images.
+ */
 public class Gen1Pokemon extends Pokemon {
     private static List<Gen1Pokemon> gen1PokemonList = new ArrayList<>();
-
+    /**
+     * Constructs a new Gen1Pokemon object with the specified attributes.
+     * 
+     * @param name The name of the Pokémon.
+     * @param type The type(s) of the Pokémon (e.g., "Fire", "Water").
+     * @param health The maximum health of the Pokémon.
+     * @param attack The attack stat of the Pokémon.
+     * @param defense The defense stat of the Pokémon.
+     * @param speed The speed stat of the Pokémon.
+     * @param specialAttack The special attack stat of the Pokémon.
+     * @param specialDefense The special defense stat of the Pokémon.
+     * @param moves A list of moves the Pokémon can use.
+     * @param frontImage The file path to the front image of the Pokémon.
+     * @param backImage The file path to the back image of the Pokémon.
+     */
     public Gen1Pokemon(String name, String type, double health, double attack, double defense, double speed, double specialAttack, double specialDefense, ArrayList<String> moves, String frontImage, String backImage) {
         super(name, type, health, attack, defense, speed, specialAttack, specialDefense, moves, frontImage, backImage);
     }
 
+    /**
+     * Initializes the list of Gen 1 Pokémon with their attributes, moves, and images.
+     * This method populates the static gen1PokemonList with all 151 Pokémon from the first generation.
+     */
     // With the help of Copilot due the amount of data 
     public static void initializeGen1Pokemon() {
         gen1PokemonList.add(new Gen1Pokemon(
@@ -1223,20 +1246,40 @@ public class Gen1Pokemon extends Pokemon {
         ));
     }
 
-
+    /**
+     * Retrieves a specific Gen 1 Pokémon by its index in the list.
+     * 
+     * @param num The index of the Pokémon in the gen1PokemonList.
+     * @return The Gen1Pokemon object at the specified index.
+     */
     public static Pokemon getGen1Pokemon(int num) {
         return gen1PokemonList.get(num);
     }
+    /**
+     * Retrieves the full list of Gen 1 Pokémon.
+     * 
+     * @return A List containing all Gen1Pokemon objects.
+     */
     public static List<Gen1Pokemon> getGen1PokemonList() {
         return gen1PokemonList;
     }
 
+    /**
+     * Displays all Gen 1 Pokémon in the console.
+     * This method prints the details of each Pokémon in the gen1PokemonList.
+     */
     public static void displayGen1Pokemon() {
         for (Gen1Pokemon pokemon : gen1PokemonList) {
             System.out.println(pokemon);
         }
     }
 
+    /**
+     * Retrieves information about a specific Gen 1 Pokémon by its name.
+     * 
+     * @param name The name of the Pokémon to retrieve.
+     * @return The Gen1Pokemon object with the specified name, or null if not found.
+     */
     public static Gen1Pokemon getPokemonInfo(String name) {
         for (Gen1Pokemon pokemon : gen1PokemonList) {
             if (pokemon.name.equalsIgnoreCase(name)) {

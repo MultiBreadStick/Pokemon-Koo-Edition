@@ -8,7 +8,16 @@ import moves.Move;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Main class for the Pokemon: Koo Edition game.
+ * This class handles the game loop, user interaction, and battle mechanics.
+ */
 public class Main {
+    /**
+     * Main method to start the game.
+     * 
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Pokemon: Koo Edition!");
@@ -107,6 +116,15 @@ public class Main {
         }
     }
 
+    /**
+     * Calculates the damage dealt by an attacker to a defender using a specific move.
+     * 
+     * @param attacker The attacking Pokémon.
+     * @param defender The defending Pokémon.
+     * @param move The move used by the attacker.
+     * @return The calculated damage.
+     * @throws NullPointerException if any of the parameters are null.
+     */
     public static double calculateDamage(PlayerPokemon attacker, PlayerPokemon defender, Move move) {
         //Added using AI due to errors. 
         if (attacker == null) {
